@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Etapa 1: regras COMUNS, de USO GERAL */
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: whitesmoke;
+        }
+
+
+        /* Regra de CSS Reset */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* Etapa 2: regras CONDICIONAIS, de  USO RESPONSIVO */
+
+
+        .topo {
+            background-color: pink;
+            padding: 4 px;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: yellow;
+        }
+
+        .conteudo {
+            background-color: aquamarine;
+            padding: 4px;
+        }
+
+
+        .Um {
+            background-color: orange;
+        }
+
+        .Dois {
+            background-color: hotpink;
+        }
+
+        .Tres {
+            background-color: green;
+        }
+
+
+        .rodape {
+            background-color: purple;
+        }
+
+        @media screen and (min-width: 644px) {
+            .topo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            h1 {
+                background-color: white;
+            }
+
+            .menu {
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .conteudo {
+                display: flex;
+
+                /* Habilitando a "Quebra", ou seja, quando não tiver espaço para colocar os artigos lado a lado, o artigo que estiver sobrando irá para baixo 
+                \/ */
+                flex-wrap: wrap;
+
+            }
+
+            .Um {
+                width: 30%;
+            }
+
+            .Dois {
+                width: 70%;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            h1 {
+                align-items: center;
+                display: flex;
+                font-size: 48px;
+            }
+
+            a,
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 2;
+            }
+
+            /* header =topo */
+            .topo {
+                
+                height: 100px;
+            }
+
+            .menu {
+                margin: 5px;
+            }
+
+            /* main = conteudo */
+            .conteudo {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            /* Seletor AGRUPADO */
+            .Um,
+            .Dois,
+            .Tres {
+                width: 33%;
+            }
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Site Exemplo</h1>
+
+        <nav class="menu">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+        </nav>
+    </header>
+    <!-- Agrupa conteudo <tag: main>:cabecalho
+            <tag:Article>:conteudo -->
+    <main class="conteudo">
+
+        <article class="Um">
+
+            <h2>Um</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis odit est suscipit nemo
+                fuga natus dolor sed reprehenderit ipsa.</p>
+
+        </article>
+
+        <article class="Dois">
+            <h2>Dois</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis odit est suscipit nemo
+                fuga natus dolor sed reprehenderit ipsa.</p>
+
+        </article>
+
+        <article class="Tres">
+            <h2>Tres</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis odit est suscipit nemo
+                fuga natus dolor sed reprehenderit ipsa.</p>
+
+        </article>
+    </main>
+
+    <footer class="rodape">
+        <h2>Exemplo Site Layout</h2>
+    </footer>
+
+
+</body>
+
+</html>

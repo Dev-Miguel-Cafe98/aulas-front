@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        *{box-sizing: border-box ;}
+
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+        img {max-width: 100%;}
+
+        .container {
+            /* background-color: brown; */
+            padding: 8px 0;
+
+            /* Habilitando o Flexbox */
+            display: flex;
+
+            /* Alinhando horizontalmente dentro da linha/container Flexbox */
+            justify-content: space-evenly;
+            height: 400px;
+            
+            /* Alinhando verticalmente dentro da linha/container Flexbox */
+            align-items: center;
+
+            /* \/ Altera o eixo /direção */
+            /* flex-direction: column; */
+
+
+            /* Habilitando a "quebra" do container Flebox. Enquanto houver espaço para os itens (cards) ficarrem lado a lado, nada muda. Quando acabar o espaço, automaticamente o flex "quebra" e faz com que os itens sejam jogados para baixo. */
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: solid 5px;
+            padding: 8px;
+            background-color: rgb(78, 184, 255);
+            width: 30%;
+         
+        }
+
+        div img {
+            border: solid 5px;
+        }
+        
+       
+        h2{
+            text-align: center;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <h1>Usando os recursos do Flexbox</h1>
+    <hr>
+    <p>Flexbox é um mecanismo CSS que permite aplicar facilmente recursos de alinhamento, esoaçamento e distribuição de elementos na página. Muito útil na elaboração de layouts baseados em linha/colunas.</p>
+    <div class="container">
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-apple.jpg" alt="">
+        <h2>Apple</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quae!</p>  
+        </div>
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-ibm.jpg" alt="">
+        <h2>IBM</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, delectus!
+        </p>
+        </div>
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-microsoft.jpg" alt="">
+        <h2>Microsoft</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, voluptatem!</p>
+        </div>
+        <div class="card">
+
+        <img src="imagens-copy/mini-apple.jpg" alt="">
+        <h2>Apple</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quae!</p>  
+        </div>
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-ibm.jpg" alt="">
+        <h2>IBM</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, delectus!
+        </p>
+        </div>
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-microsoft.jpg" alt="">
+        <h2>Microsoft</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, voluptatem!</p>
+        </div>
+        <div class="card">
+
+        <img src="imagens-copy/mini-apple.jpg" alt="">
+        <h2>Apple</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quae!</p>  
+        </div>
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-ibm.jpg" alt="">
+        <h2>IBM</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, delectus!
+        </p>
+        </div>
+
+        <div class="card">
+
+        <img src="imagens-copy/mini-microsoft.jpg" alt="">
+        <h2>Microsoft</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, voluptatem!</p>
+        </div>
+    </div>
+
+</body>
+</html>
